@@ -11,7 +11,7 @@
       scroll-behavior: smooth;
     }
     .glass-nav {
-      background: rgba(0, 0, 0, 0.6);
+      background: rgba(23, 59, 158, 0.6);
       backdrop-filter: blur(10px);
       transition: background 0.3s ease;
       box-shadow: 0 2px 10px rgba(0,0,0,0.2);
@@ -56,8 +56,54 @@
     .hero .container {
       position: relative;
       z-index: 2;
+      }
     }
-  }
+
+    .card {
+      background: white;
+      border-radius: 1rem;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #adb5bd;
+    }
+
+    #presentacion-breve h2 {
+      font-weight: 700;
+    }
+
+    #presentacion-breve .bi {
+      transition: transform 0.3s ease;
+    }
+
+    #presentacion-breve .bi:hover {
+      transform: scale(1.2);
+    }
+
+    .portfolio-card:hover {
+      transform: translateY(-5px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    .portfolio-card img {
+      object-fit: cover;
+    }
+
+    .portfolio-card ul {
+      padding-left: 1rem;
+    }
+
+    .ratio img {
+      border-radius: 0.5rem 0.5rem 0 0;
+    }
+
+    .social-icons a:hover {
+      transform: scale(1.1);
+      transition: all 0.2s ease;
+      opacity: 0.9;
+    }
     
       </style>
     </head>
@@ -67,106 +113,211 @@
   
 
   <nav class="navbar navbar-expand-lg fixed-top glass-nav">
-    <div class="container">
-      <img src="img/LOGO 50 nobk.png" alt="logo">
-      <a class="navbar-brand fw-bold text-white" href="#">Denki</a>
-      <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav gap-3">
-          <li class="nav-item"><a class="nav-link text-white" href="#servicios">Servicios</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#porfolio">Porfolio</a></li>
-          <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
-        </ul>
+  <div class="container">
+    <!-- Logo + nombre -->
+    <a class="navbar-brand d-flex align-items-center text-white" href="#">
+      <img src="img/LOGO 50 nobk.png" alt="logo" width="40" height="40" class="me-2">
+      <span class="fw-bold">Denki</span>
+    </a>
+
+    <!-- Botón hamburguesa -->
+    <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Menú de navegación -->
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav align-items-center me-3">
+        <li class="nav-item"><a class="nav-link text-white" href="#presentacion">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#servicios">Servicios</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#porfolio">Porfolio</a></li>
+        <li class="nav-item"><a class="nav-link text-white" href="#contacto">Contacto</a></li>
+      </ul>
+
+      <!-- Íconos de redes sociales -->
+      <div class="d-flex gap-3">
+        <a href="https://www.instagram.com/tuempresa" target="_blank" class="text-decoration-none text-danger fs-5">
+          <i class="bi bi-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com/company/tuempresa" target="_blank" class="text-decoration-none text-info fs-5">
+          <i class="bi bi-linkedin"></i>
+        </a>
       </div>
     </div>
-  </nav>
+  </div>
+</nav>
+
 
   <!-- Hero Section -->
   <section id="presentacion" class="hero d-flex align-items-center text-white">
     <div class="container text-center">
       <h1 class="display-4 fw-bold">Bienvenidos a Denki</h1>
       <p class="lead">Soluciones electricas.</p>
-      <a href="#servicios" class="btn btn-primary btn-lg mt-3">Ver Servicios</a>
+      <!--a href="#servicios" class="btn btn-primary btn-lg mt-3">Ver Servicios</a-->
+    </div>
+  </section>
+
+  <section id="presentacion-breve" class="section bg-white text-center">
+    <div class="container">
+      <h2 class="mb-4">¿Quiénes somos?</h2>
+      <p class="lead mx-auto" style="max-width: 800px;">
+        Con más de 10 años de experiencia nuestra misión es ofrecer proyectos
+        eléctricos de calidad, asegurando eficiencia y seguridad en cada paso.
+      </p><p class="lead mx-auto" style="max-width: 800px;">
+      Nuestro equipo está formado por profesionales altamente capacitados,
+      comprometidos con la excelencia y la satisfacción de nuestros clientes.
+      Además, contamos con maquinaria propia y una red de proveedores de
+      confianza para garantizar la continuidad y calidad de nuestros
+
+      proyectos.
+      </p>
+      
+      <!--div class="row mt-5">
+        <div class="col-md-4">
+          <i class="bi bi-lightbulb fs-1 text-primary mb-3"></i>
+          <h5>Innovación</h5>
+          <p>Nos adaptamos a los cambios y proponemos ideas modernas para tus desafíos.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-people fs-1 text-primary mb-3"></i>
+          <h5>Cercanía</h5>
+          <p>Hablamos tu idioma: acompañamos cada paso, desde el primer contacto hasta el éxito.</p>
+        </div>
+        <div class="col-md-4">
+          <i class="bi bi-award fs-1 text-primary mb-3"></i>
+          <h5>Calidad</h5>
+          <p>Garantizamos resultados profesionales con dedicación, detalle y compromiso.</p>
+        </div>
+      </div-->
     </div>
   </section>
 
   <!-- Servicios -->
   <section id="servicios" class="section">
     <div class="container">
-      <h2 class="text-center mb-5">Nuestros Servicios</h2>
+      <h2 class="text-center mb-5">¿Que hacemos?</h2>
       <div class="row text-center">
         <div class="col-md-4">
-          <i class="bi bi-briefcase-fill fs-1 text-primary"></i>
-          <h4 class="mt-3">funcion</h4>
-          <p>Descripción</p>
+          <i class="bi bi-nut-fill fs-1 text-primary"></i>
+          <h4 class="mt-3">Mantenimiento preventivo y correctivo</h4>
+          <!--p>Descripción</p-->
         </div>
         <div class="col-md-4">
           <i class="bi bi-tools fs-1 text-primary"></i>
-          <h4 class="mt-3">funcion</h4>
-          <p>Descripción</p>
+          <h4 class="mt-3">Instalaciones eléctricas de media y baja tensión</h4>
+          <!--p>Descripción</p-->
         </div>
         <div class="col-md-4">
-          <i class="bi bi-globe fs-1 text-primary"></i>
-          <h4 class="mt-3">funcion</h4>
-          <p>Descripción</p>
+          <i class="bi bi-rulers fs-1 text-primary"></i>
+          <h4 class="mt-3">Proyectos a medida</h4>
+          <!--p>Descripción</p-->
         </div>
       </div>
     </div>
   </section>
 
   <!-- Porfolio -->
-  <section id="porfolio" class="section bg-light">
+  <section id="porfolio" class="section bg-light py-5">
+  <div class="container">
+    <h2 class="text-center mb-5 fw-bold">Nuestro Trabajo</h2>
+    <div class="row g-4">
+      
+      <!-- Proyecto 1 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm portfolio-card">
+          <div class="ratio ratio-4x3">
+            <img src="img/contenido/allboys.JPG" class="card-img-top rounded-top object-fit-cover" alt="Proyecto 1">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">Estadio All Boys</h5>
+            <p class="card-text">Conexión y desconexión de grupo electrógeno durante eventos.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 2 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm portfolio-card">
+          <div class="ratio ratio-4x3">
+            <img src="img/contenido/barriocolonia.JPG" class="card-img-top rounded-top object-fit-cover" alt="Proyecto 2">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">Barrio Colonia 1 y 2</h5>
+            <ul class="list-unstyled mb-0">
+              <li>Gestión y construcción de pilares de obra.</li>
+              <li>Proyecto de tendido eléctrico de media y baja tensión.</li>
+              <li>Acometidas a medidores individuales.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Proyecto 3 -->
+      <div class="col-md-4">
+        <div class="card h-100 border-0 shadow-sm portfolio-card">
+          <div class="ratio ratio-4x3">
+            <img src="img/contenido/velez.JPG" class="card-img-top rounded-top object-fit-cover" alt="Proyecto 3">
+          </div>
+          <div class="card-body">
+            <h5 class="card-title fw-semibold">Evento en estadio Vélez</h5>
+            <p class="card-text">Certificación de conexiones transitorias desde grupos electrógenos para evento masivo.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Contacto -->
+  <section id="contacto" class="section bg-light">
     <div class="container">
-      <h2 class="text-center mb-5">Nuestro Trabajo</h2>
-      <div class="row g-4">
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="img/contenido/allboys.JPG" class="card-img-top" alt="Proyecto 1">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 1</h5>
-              <p class="card-text">Descripción</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="img/contenido/barriocolonia.JPG" class="card-img-top" alt="Proyecto 2">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 2</h5>
-              <p class="card-text">Descripción.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card h-100 shadow-sm">
-            <img src="img/contenido/velez.JPG" class="card-img-top" alt="Proyecto 3">
-            <div class="card-body">
-              <h5 class="card-title">Proyecto 3</h5>
-              <p class="card-text">Descripción</p>
+      <h2 class="text-center mb-5">Contacto</h2>
+      
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-sm border-0 rounded-4">
+            <div class="card-body p-5">
+              <form action="https://formsubmit.co/lopez.tapia.dante.ariel@gmail.com" method="POST">
+                
+                <div class="mb-3">
+                  <label for="nombre" class="form-label">Nombre</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-person"></i></span>
+                    <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="email" class="form-label">Correo electrónico</label>
+                  <div class="input-group">
+                    <span class="input-group-text"><i class="bi bi-envelope"></i></span>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nombre@ejemplo.com" required>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label for="mensaje" class="form-label">Mensaje</label>
+                  <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta..." required></textarea>
+                </div>
+
+                <!-- Extras opcionales -->
+                <input type="hidden" name="_captcha" value="false">
+                <!--input type="hidden" name="_next" value="https://tusitio.com/gracias.html"-->
+
+                <div class="d-grid">
+                  <button type="submit" class="btn btn-primary btn-lg">
+                    <i class="bi bi-send-fill me-2"></i> Enviar mensaje
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-
-
-  <!-- Contacto -->
-  <form action="https://formsubmit.co/lopez.tapia.dante.ariel@gmail.com" method="POST">
-    <input type="text" name="nombre" class="form-control" placeholder="Tu nombre" required>
-    <input type="email" name="email" class="form-control" placeholder="Tu correo" required>
-    <textarea name="mensaje" class="form-control" rows="4" placeholder="Tu mensaje" required></textarea>
-    
-    <!-- Opcional: redirección tras enviar -->
-    <!--input type="hidden" name="_next" value="https://tusitio.com/gracias.html"-->
-    
-    <!-- Opcional: evitar spam -->
-    <input type="hidden" name="_captcha" value="false">
-
-    <button type="submit" class="btn btn-primary mt-3">Enviar</button>
-  </form>
 
 
   <!-- Bootstrap JS -->
