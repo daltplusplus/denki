@@ -263,7 +263,7 @@
       <div class="col-lg-8">
         <div class="card shadow-sm border-0 rounded-4">
           <div class="card-body p-5" data-aos="fade-up">
-            <form action="https://formsubmit.co/consultas@denkisoluciones.com" method="POST">
+            <form id="contact-form">
               <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
                 <div class="input-group">
@@ -287,6 +287,9 @@
                 <button type="submit" class="btn btn-primary btn-lg">
                   <i class="bi bi-send-fill me-2"></i> Enviar mensaje
                 </button>
+              </div>
+              <div id="form-alert" class="alert alert-success d-none mt-3" role="alert">
+                ¡Mensaje enviado con éxito! Nos pondremos en contacto a la brevedad.
               </div>
             </form>
           </div>
@@ -324,6 +327,30 @@
 <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 <script>
   AOS.init({ duration: 800, once: true });
+</script>
+<script>
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Evita el envío tradicional
+
+    const form = e.target;
+    const data = new FormData(form);
+
+    fetch('https://formsubmit.co/ajax/consultas@denkisoluciones.com', {
+      method: 'POST',
+      body: data
+    })
+    .then(response => {
+      if (response.ok) {
+        form.reset();
+        document.getElementById('form-alert').classList.remove('d-none');
+      } else {
+        alert('Ocurrió un error. Por favor, intentá nuevamente.');
+      }
+    })
+    .catch(error => {
+      alert('Ocurrió un error al enviar el formulario.');
+    });
+  });
 </script>
 </body>
 </html>
