@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://denkisoluciones.com/sitemap.xml

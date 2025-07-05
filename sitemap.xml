@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://denkisoluciones.com/</loc>
+    <lastmod>2025-07-05</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://denkisoluciones.com/#servicios</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://denkisoluciones.com/#nosotros</loc>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://denkisoluciones.com/#contacto</loc>
+    <priority>0.80</priority>
+  </url>
+</urlset>
